@@ -5,18 +5,18 @@ import startApp from '../helpers/start-app';
 var App;
 
 module('Integration - About Page', {
-	beforeEach: function() {
-		App = startApp();
-	},
-	afterEach: function() {
-		Ember.run(App, 'destroy');
-	}
+  beforeEach: function() {
+    App = startApp();
+  },
+  afterEach: function() {
+    Ember.run(App, 'destroy');
+  }
 });
 
 test('Should navigate to the About page', function(assert) {
-	visit('/').then(function(assert) {
-		click("a:contains('About')").then(function(assert) {
-			assert.equal(find('h3').text(), 'About');
-		});
-	});
+  visit('/').then(function() {
+    click("a:contains('About')").then(function() {
+      assert.equal(find('h3').text(), 'About');
+    });
+  });
 });
