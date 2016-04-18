@@ -41,7 +41,7 @@ module('Integration - Speaker Page', {
 	},
 	afterEach: function() {
 		Ember.run(App, 'destroy');
-		server.shutdoen();
+		server.shutdown();
 	}
 });
 
