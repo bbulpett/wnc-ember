@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model: functoin() {
+	model: function() {
 		return this.store.find('speaker');
 	}
 });
